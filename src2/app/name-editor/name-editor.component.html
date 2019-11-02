@@ -1,0 +1,14 @@
+<p></p>
+<label>
+    Email:
+    <input type="text" [formControl]="email">
+    Senha:
+    <input type="text" [formControl]="senha">
+</label>
+<p>
+    Value: {{ email.value }}
+    Value2: {{ senhae.value2 }}
+</p>
+<p>
+    <button (click)="updateData()">Update Name</button> 
+</p>

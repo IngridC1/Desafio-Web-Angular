@@ -1,0 +1,83 @@
+<div class="login-page">
+    <div class="content">
+        <!-- <h1 class="app-name">Sb Admin Material</h1> -->
+        <form class="login-form" fxFlex  >
+            <div class="text-center">
+                <h2 class="app-name">Desafio Web - Angular</h2>
+            </div>
+            <div fxFlex  fxlayout="row" fxlayout.lt-md="column">
+                <div fxFlexFill>
+                    <mat-form-field class="w-100">
+                        <input matInput type="string" placeholder="Email">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxFlex  fxLayout="row" fxLayout.lt-md="column">
+                <div fxFlexFill>
+                    <mat-form-field class="w-100">
+                        <input matInput type="password" placeholder="Senha">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxFlex  fxLayout="row" fxLayout.lt-md="column" style="margin: 20px 0 30px 0">
+                <div fxFlex>
+                    <mat-checkbox color="primary">Remember Me</mat-checkbox>
+                </div>
+                <div fxFlex  fxLayoutAlign="end">
+                    <a href="javascript:void(0)">Forget Password</a>
+                </div>
+            </div>
+            <div fxFlex  fxLayout="row" fxLayout.lt-md="column">
+                <div fxFlexFill>
+                    <button ng-disabled="create.$invalid || (string =) || (password =)" mat-raised-button color="primary" class="button button-balanced" ng-click="register()">Login</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+
+------------------------------------------------------
+
+<div class="login-page">
+        <div class="content">
+            <!-- <h1 class="app-name">Sb Admin Material</h1> -->
+            <form class="login-form" fxFlex  >
+                <div class="text-center">
+                    <h2 class="app-name">Desafio Web - Angular</h2>
+                </div>
+                <div fxFlex  fxlayout="row" fxlayout.lt-md="column">
+                    <div fxFlexFill>
+                        <mat-form-field class="w-100">
+                            <input type="text" class="form-control rounded-0" [(ngModel)]="loginUserData"name="email" required > <!-- #statusName="ngModel" [(ngModel)]="UserService.formData.CreateDate" class="form-control" -->
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex  fxLayout="row" fxLayout.lt-md="column">
+                    <div fxFlexFill>
+                        <mat-form-field class="w-100">
+                            <input matInput type="password" placeholder="Senha" [(ngModel)]="loginUserData" #loginPassword="ngModel" name="password" required >
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex  fxLayout="row" fxLayout.lt-md="column" style="margin: 20px 0 30px 0">
+                    <div fxFlex>
+                        <mat-checkbox color="primary">Remember Me</mat-checkbox>
+                    </div>
+                    <div fxFlex  fxLayoutAlign="end">
+                        <a href="javascript:void(0)">Forget Password</a>
+                    </div>
+                </div>
+                <div fxFlex  fxLayout="row" fxLayout.lt-md="column">
+                    <div fxFlexFill>
+                        <button  type="button" (click)="logar()" class="btn btn-success float-right"> <!-- [disabled]="disabledAgreement && !user.valid " -->
+                            Login
+                        </button>
+                    </div>
+                </div>
+    
+            </form>
+        </div>
+    </div>
